@@ -1,0 +1,343 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+:root{
+    /*divider*/
+    --hue: 170;
+    --base-color:#66B3AB;
+    --base-color-second:rgb(23, 95, 92);
+
+    /*cores*/
+    --text-color: black;
+    --background: #F7F7E8;
+
+    /*fontes*/
+    --title-font: 'Noto serif', sans-serif;
+    --body-font: 'Noto serif', sans-serif;
+    --logo: 'Mitr', sans-serif;
+}
+
+body {
+    background: var(--background);
+    font: var(--body-font);
+    overflow-x: hidden;
+}
+
+/*------------------------HEADER----------------------------*/
+
+header {
+    width: 100%;
+    background-color: #66B3AB;
+    height: 7rem;
+    position: fixed;
+    top: 0;
+    border-bottom: 1px solid rgb(164, 197, 197);
+    margin-bottom: 2rem;  
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+}
+
+#nav-bar{
+    display: flex;
+}
+
+#nav-bar img {
+    position: relative;
+    left: 2%;
+    width: 4.5rem;
+    height: 4.5rem;
+    margin: 1.2rem;
+}
+
+.logo{
+    position: absolute;
+    left: 9%;
+    font: 500 3rem var(--logo);
+    color: whitesmoke;
+    padding-top: 1rem;
+    margin-right: 6.5rem;
+}
+
+.bar {
+    position: relative;
+    top: 2rem;
+    left: 42%;
+    font: 700 1.85rem var(--body-font) ;
+}
+
+.bar a {
+    color: whitesmoke;
+    padding: 1.5rem;
+}
+
+.bar .login {
+    color:rgba(61, 139, 136, 0.658);
+}
+
+.bar a:hover{
+    color: rgb(23, 95, 92);
+    transition: color 1s;
+}
+
+/*----------------------HOME-----------------------*/
+
+.container {
+    margin: 3rem;
+    height: 32.8rem;
+}
+
+#home .home-text{
+    padding-top: 8rem;
+    font-size: 1.5rem;
+}
+
+.form {
+    position: relative;
+    top: 50%;
+}
+
+.search{
+	position: absolute;
+    left: 20%;
+	transform: translate(-50%, -50%);
+	background: #66B3AB;
+	height: 2.5rem;
+    width: 32rem;
+	padding: 1rem 0 1rem 0;
+	border-radius: 4rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+    z-index: 0;
+}
+
+.bText{
+	border: none;
+	background: none;
+	outline: none;
+    width: 32rem;
+	color: #f0f5fb;
+    padding: 1rem;
+	font-size: 1.1rem;
+    font: 400 1rem var(--body-font);
+}
+
+::-webkit-input-placeholder{
+	color:whitesmoke;
+}
+
+.search-btn{
+	width: 2.5rem;
+	height: 2.5rem;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    background: #66B3AB;
+    border: none;
+}
+
+.search-btn:hover{
+    background-color: darkcyan;
+    cursor: pointer;
+}
+
+.image-box {
+    position: relative;
+    left: 70%;
+}
+
+.image-box img {
+    width: 25rem;
+}
+
+.divider-1{
+    height: 2.5px;
+    background: linear-gradient(
+    270deg, 
+    hsla(var(--hue), 36%, 57%, 1) 5%, 
+    hsla(var(--hue), 65%, 88%, 0.34) 100%);
+    width: 100%;
+}
+
+/*---------------------------ABOUT-----------------------------*/
+
+.container {
+    font-family: var(--body-font);
+}
+.about-text {
+    text-align: justify;
+    font: 500 1.2rem var(--body-font);
+}
+
+#about h1, h2 {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.dev-image {
+    display: inline-block;
+    padding-left: 3rem;
+}
+
+.dev1{
+    width: 12.5rem;
+    height: 14rem;
+    margin-left: 4rem;
+    border-radius: 12px;
+}
+
+.dev2{
+    width: 14rem;
+    height: 14rem;
+    margin-left: 4rem;
+    border-radius: 12px;
+}
+
+/*---------------------FOOTER-------------------*/
+
+footer {
+    margin-top: 8rem;
+    width: 100%;
+    height: 12rem;
+    background: #66B3AB;
+    display: flex;
+    font: 500 0 var(--body-font);
+    color: white;
+}
+
+.information h2 {
+    text-align: left;
+    font-size: 2rem;
+}
+
+.information p{
+    font-size: 1.89rem;
+    padding-top: 1rem;
+    margin-left: 1.5rem;
+    padding-right: 8rem;
+    display: inline-block;
+}
+
+@media (min-width: 2560px) {
+    .container {
+        margin-left: 20rem;
+        margin-right: 20rem;
+        height: 61rem;
+    }
+
+    header {
+        height: 8rem;
+    }
+
+    #nav-bar img {
+        position: relative;
+        left: 8%;
+        width: 7rem;
+        height: 6.5rem;
+    }
+
+    .logo{
+        position: absolute;
+        left: 12%;
+        top: -1rem;
+        font: 500 5rem var(--logo);
+    }
+
+    .bar {
+        position: relative;
+        top: 2rem;
+        left: 31%;
+        font: 700 2.5rem var(--body-font) ;
+    }
+
+    .bar a {
+        padding: 3rem
+    }
+
+    #home .home-text{
+        padding-top: 10rem;
+        font-size: 2rem;
+    }
+
+    .form {
+        top: 45%;
+    }
+
+    .search{
+        position: absolute;
+        left: 23%;
+        height: 4rem;
+        width: 55rem;
+    }
+
+    .bText{
+        font-size: 1.8rem;
+    }
+
+    .search-btn{
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .search-btn img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .image-box img {
+        width: 40rem;
+    }
+
+    .about-text {
+        text-align: justify;
+        font: 500 2.5rem var(--body-font);
+    }
+    
+    #about h1, h2 {
+        text-align: center;
+        padding: 2.5rem;
+    }
+
+    #about h2{
+        font-size: 2.5rem;
+    }
+    
+    .dev-image {
+        padding-left: 5rem;
+    }
+
+    .dev1{
+        width: 18.5rem;
+        height: 20rem;
+        margin-left: 8rem;
+    }
+    
+    .dev2{
+        width: 20rem;
+        height: 20rem;
+        margin-left: 8rem;
+    }
+    
+    footer {
+        margin-top: 15rem;
+        padding-left: 15rem;
+        width: 230rem;
+        height: 18rem;
+    }
+    
+    .information h2 {
+        font-size: 3rem;
+    }
+    
+    .information p{
+        font-size: 2.5rem;
+        margin-left: 2.5rem;
+    }
+}
